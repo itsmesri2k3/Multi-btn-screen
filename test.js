@@ -1,9 +1,8 @@
 var menucontent = document.getElementById("menu-content");
-var computedRight = window.getComputedStyle(menucontent).getPropertyValue("right");
 var closebtn = document.getElementById("close-btn");
 
 function menuopen() {
-    if (computedRight === "0px") {
+    if (menucontent === "0px") {
         menucontent.style.right = "-350px";
     } else {
         menucontent.style.right = "0px";
