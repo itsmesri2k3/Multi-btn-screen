@@ -32,7 +32,7 @@ body{
     transition: right 0.3s ease;
     z-index: 1000;
     margin: 10px;
-    overflow: 100;
+    overflow-x: hidden;
 }
 #menu-btn{
     display: flex;
