@@ -1,0 +1,20 @@
+body{
+    background-color: gainsboro;
+}
+nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+#menu-content{
+    background-color: #252525;
+    border: 3px solid gray;
+    width: 350px;
+    height: 88%;
+    border-radius: 20px;
+    right: -350px;
+    position: fixed;
+    transition: right 0.3s ease;
+}
