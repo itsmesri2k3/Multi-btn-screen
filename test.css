@@ -28,15 +28,20 @@ body{
 #menu-content{
     background-color: #252525;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
-    width: 280px;
+    width: 350px;
     height: 88%;
     border-radius: 20px;
-    right: -350px;
+    right: -370px;
     position: fixed;
     transition: right 0.3s ease;
     z-index: 1000;
     margin: 10px;
     overflow-x: hidden;
+}
+@media (max-width: 500px){
+    #menu-content{
+        width: 250px;
+    }
 }
 #menu-btn{
     display: flex;

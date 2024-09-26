@@ -3,14 +3,14 @@ var closebtn = document.getElementById("close-btn");
 
 function menuopen() {
     if (menucontent === "0px") {
-        menucontent.style.right = "-350px";
+        menucontent.style.right = "-370px";
     } else {
         menucontent.style.right = "0px";
     }
 }
 
 function closefun(){
-    menucontent.style.right = "-350px";
+    menucontent.style.right = "-370px";
 }
 var one = document.getElementById("one");
 var two = document.getElementById("two");
@@ -33,24 +33,24 @@ function showSection(section) {
 
 function part1() {
     showSection(one);
-    menucontent.style.right = "-350px";
+    menucontent.style.right = "-370px";
     home.style.color="aliceblue";
 }
 
 function part2() {
     showSection(two);
-    menucontent.style.right = "-350px";
+    menucontent.style.right = "-370px";
     about.style.color="aliceblue";
 }
 
 function part3() {
     showSection(three);
-    menucontent.style.right = "-350px";
+    menucontent.style.right = "-370px";
     service.style.color="aliceblue";
 }
 
 function part4() {
     showSection(four);
-    menucontent.style.right = "-350px";
+    menucontent.style.right = "-370px";
     contact.style.color="aliceblue";
 }
