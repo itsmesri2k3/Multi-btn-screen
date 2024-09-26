@@ -9,11 +9,27 @@
 </head>
 <body>
     <header id="menu">
-        <div><h1>NAME</h1></div>
-        <div><a onclick="menuopen()"><i class="fa-solid fa-bars fa-xl"></i></a></div>
+        <div style="margin: 20px;"><h4>BRAND LOGO</h4></div>
+        <div style="margin: 20px;"><a onclick="menuopen()"><i class="fa-solid fa-bars fa-xl"></i></a></div>
     </header>
     <div id="menu-content">
 
+    </div>
+    <div style="width: 100%; position: fixed; bottom: 0%; display: flex; justify-content: center; z-index: 100;">
+        <div id="menu-btn">
+            <button id="home" onclick="part1()">HOME</button>
+            <button id="about" onclick="part2()">ABOUT</button>
+            <button id="service" onclick="part3()">SERVICE</button>
+            <button id="contact" onclick="part4()">CONTACT</button>
+        </div>
+    </div>
+    <div style="background-color: #ADD8E6; width: 100%; height: 100%; position: absolute; display: block;" id="one">
+    </div>
+    <div style="background-color: #ffffd1; width: 100%; height: 100%; position: absolute; display: none;" id="two">
+    </div>
+    <div style="background-color: #F08080; width: 100%; height: 100%; position: absolute; display: none;" id="three">
+    </div>
+    <div style="background-color: #90EE90; width: 100%; height: 100%; position: absolute; display: none;" id="four">
     </div>
 <script src="test.js"></script>  
 </body>
