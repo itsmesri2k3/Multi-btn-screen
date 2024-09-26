@@ -36,20 +36,24 @@ function showSection(section) {
 
 function part1() {
     showSection(one);
+    menucontent.style.right = "-350px";
     home.style.color="aliceblue";
 }
 
 function part2() {
     showSection(two);
+    menucontent.style.right = "-350px";
     about.style.color="aliceblue";
 }
 
 function part3() {
     showSection(three);
+    menucontent.style.right = "-350px";
     service.style.color="aliceblue";
 }
 
 function part4() {
     showSection(four);
+    menucontent.style.right = "-350px";
     contact.style.color="aliceblue";
 }
