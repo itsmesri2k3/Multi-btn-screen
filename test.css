@@ -7,6 +7,9 @@
 ::-webkit-scrollbar {
 	width: 0px; 
 } 
+a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
 body{
     background-color: gainsboro;
 }
