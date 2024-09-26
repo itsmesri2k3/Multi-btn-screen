@@ -9,6 +9,7 @@ body{
 }
 #menu{
     background-color: #25252561;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
     color: aliceblue;
     width: 100%;
     display: flex;
@@ -19,6 +20,7 @@ body{
 }
 #menu-content{
     background-color: #252525;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
     border: 2px solid gray;
     width: 300px;
     height: 88%;
