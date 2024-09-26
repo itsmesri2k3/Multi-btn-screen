@@ -4,6 +4,9 @@
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
 }
+::-webkit-scrollbar {
+	width: 0px; 
+} 
 body{
     background-color: gainsboro;
 }
