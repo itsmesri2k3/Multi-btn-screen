@@ -1,7 +1,8 @@
-function menuopen() {
-    var menucontent = document.getElementById("menu-content");
-    var computedRight = window.getComputedStyle(menucontent).getPropertyValue("right");
+var menucontent = document.getElementById("menu-content");
+var computedRight = window.getComputedStyle(menucontent).getPropertyValue("right");
+var closebtn = document.getElementById("close-btn");
 
+function menuopen() {
     if (computedRight === "0px") {
         menucontent.style.right = "-350px";
     } else {
@@ -9,6 +10,9 @@ function menuopen() {
     }
 }
 
+function closefun(){
+    menucontent.style.right = "-350px";
+}
 var one = document.getElementById("one");
 var two = document.getElementById("two");
 var three = document.getElementById("three");
