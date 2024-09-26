@@ -27,8 +27,8 @@ body{
 }
 #menu-content{
     background-color: #252525;
-    box-shadow: 0 0 10px rgba(0,0,0,0.7);
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    width: 280px;
     height: 88%;
     border-radius: 20px;
     right: -350px;
