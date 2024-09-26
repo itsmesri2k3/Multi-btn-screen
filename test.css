@@ -12,9 +12,13 @@ body{
 }
 #menu{
     background-color: #25252561;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
     color: aliceblue;
-    width: 100%;
+    border-radius: 12px;
+    top: 10px;
+    bottom: 92vh;
+    left: 10px;
+    right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
