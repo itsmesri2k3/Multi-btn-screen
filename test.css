@@ -44,6 +44,7 @@ body{
     height: 40px;
     margin: 10px;
     z-index: 10;
+    overflow: hidden;
 }
 button{
     cursor: pointer;
