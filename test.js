@@ -19,7 +19,6 @@ var four = document.getElementById("four");
 
 
 function showSection(section) {
-    // Hide all sections
     one.style.display = "none";
     two.style.display = "none";
     three.style.display = "none";
@@ -29,7 +28,6 @@ function showSection(section) {
     about.style.color="black";
     service.style.color="black";
     contact.style.color="black";
-    // Show the selected section
     section.style.display = "block";
 }
 
