@@ -13,6 +13,9 @@ function closefun(){
     menucontent.style.right = "-370px";
     sidepopup.style.left = "-70px"; 
 }
+function closefunx(){
+    menucontent.style.right = "-370px";
+}
 var one = document.getElementById("one");
 var two = document.getElementById("two");
 var three = document.getElementById("three");
