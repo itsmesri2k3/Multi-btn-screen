@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header id="menu">
+    <header id="menu" onclick="closepopup()">
         <div style="margin: 10px; margin-left: 10px;"><img src="raamvox.png" height="20px"></div>
-        <div style="padding: 10px; margin-right: 10px; cursor: pointer;" onclick="menuopen()"><a><i class="fa-solid fa-chevron-left fa-xl"></i></a></div>
+        <div style="padding: 10px; margin-right: 10px; cursor: pointer;" onclick="menuopen()"><a><i class="fa-solid fa-angles-left fa-xl"></i></a></div>
     </header>
     <div id="menu-content">
-        <div style=" padding: 20px; color: gainsboro; width: 20px; cursor: pointer;" onclick="closefun()"><i class="fa-solid fa-chevron-right fa-xl" id="close-btn"></i></div>
+        <div style=" padding: 20px; color: gainsboro; width: 20px; cursor: pointer;" onclick="closefun()"><i class="fa-solid fa-angles-right fa-xl" id="close-btn"></i></div>
         <div>
             <p style="color: white;"></p>
         </div>
@@ -34,6 +34,11 @@
     </div>
     <div style="background-color: #90EE90; width: 100%; height: 100%; position: absolute; display: none;" id="four" onclick="closefun()">
     </div>
+    <nav style="height: 100%; width: max-content; position: absolute; display: flex; align-items: center; left: -70px; transition: left 0.3s ease;" id="sidepopup">
+        <div id="menu-content2"></div>
+        <div style=" padding-right: 20px; padding-top: 20px; padding-bottom: 20px; padding-left: 10px; color: aliceblue; width: 20px; cursor: pointer;" onclick="closefun2()"><i class="fa-solid fa-circle-notch fa-lg" id="close-btn"></i></div>
+    </nav>
+        
 <script src="test.js"></script>  
 </body>
 </html>

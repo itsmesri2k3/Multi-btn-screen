@@ -11,6 +11,7 @@ function menuopen() {
 
 function closefun(){
     menucontent.style.right = "-370px";
+    sidepopup.style.left = "-70px"; 
 }
 var one = document.getElementById("one");
 var two = document.getElementById("two");
@@ -54,3 +55,23 @@ function part4() {
     menucontent.style.right = "-370px";
     contact.style.color="aliceblue";
 }
+
+var sidepopup = document.getElementById("sidepopup");
+
+function closefun2() {
+    if (sidepopup.style.left === "0px") {
+        sidepopup.style.left = "-70px"; 
+        menucontent.style.right = "-370px";
+        
+    } else {
+        sidepopup.style.left = "0px"; 
+        menucontent.style.right = "-370px";
+    }
+}
+function closepopup(){
+    sidepopup.style.left = "-70px"; 
+}
+
+document.oncontextmenu = function() {
+    return false;
+};

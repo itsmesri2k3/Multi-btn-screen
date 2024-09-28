@@ -41,6 +41,17 @@ body{
     margin: 10px;
     overflow-x: hidden;
 }
+#menu-content2{
+    background-color: #252525;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    width: 50px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    margin: 10px;
+    z-index: 1000;
+    overflow-x: hidden;
+}
 @media (max-width: 500px){
     #menu-content{
         width: 250px;
