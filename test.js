@@ -72,27 +72,13 @@ function closepopup(){
     sidepopup.style.left = "-70px"; 
 }
 
-var sidepopup = document.getElementById("sidepopup");
-var touchStartX = 0;
-var touchEndX = 0;
 
-// Function to handle swipe gesture
-function handleGesture() {
-    // Check for a left-to-right swipe
-    if (touchEndX > touchStartX + 50) { // 50px as the swipe threshold
-        sidepopup.style.left = "0px"; // Show the side navigation
+document.addEventListener('touchstart', (e) => touchStartX = e.changedTouches[0].screenX);
+document.addEventListener('touchend', (e) => {
+    if (e.changedTouches[0].screenX > touchStartX + 50) {
+        document.getElementById("sidepopup").style.left = "0px"; // Open the side navigation
     }
-}
-
-// Add touch event listeners to detect swipe
-document.addEventListener('touchstart', function(e) {
-    touchStartX = e.changedTouches[0].screenX; // Get the starting X position
-}, false);
-
-document.addEventListener('touchend', function(e) {
-    touchEndX = e.changedTouches[0].screenX; // Get the ending X position
-    handleGesture(); // Check if it is a left-to-right swipe
-}, false);
+});
 
 
 document.oncontextmenu = function() {
