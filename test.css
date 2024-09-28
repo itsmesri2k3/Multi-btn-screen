@@ -16,8 +16,9 @@ body{
 #menu{
     background-color: #25252561;
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    outline: 2px solid gray;
     color: aliceblue;
-    border-radius: 10px;
+    border-radius: 15px;
     top: 10px;
     bottom: auto;
     left: 10px;
@@ -40,9 +41,10 @@ body{
 #menu-content{
     background-color: #252525;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    outline: 2px solid gray;
     width: 300px;
     height: 88%;
-    border-radius: 20px;
+    border-radius: 15px;
     right: -370px;
     position: fixed;
     transition: right 0.5s ease;
@@ -53,9 +55,10 @@ body{
 #menu-content2{
     background-color: #252525;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    outline: 2px solid gray;
     width: 50px;
     height: 300px;
-    border-radius: 20px;
+    border-radius: 15px;
     position: relative;
     margin: 10px;
     z-index: 1000;
@@ -70,8 +73,9 @@ body{
     display: flex;
     position: fixed;
     justify-content: space-around;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #25252561;
+    outline: 2px solid gray;
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
     width: 300px;
     height: 40px;
