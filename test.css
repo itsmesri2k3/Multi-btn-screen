@@ -45,7 +45,7 @@ body{
     border-radius: 20px;
     right: -370px;
     position: fixed;
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
     z-index: 1000;
     margin: 10px;
     overflow-x: hidden;
