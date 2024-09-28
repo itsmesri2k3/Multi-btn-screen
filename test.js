@@ -73,12 +73,12 @@ function closepopup(){
 }
 
 
-document.addEventListener('touchstart', (e) => touchStartX = e.changedTouches[0].screenX);
-document.addEventListener('touchend', (e) => {
-    if (e.changedTouches[0].screenX > touchStartX + 50) {
-        document.getElementById("sidepopup").style.left = "0px"; // Open the side navigation
-    }
-});
+// document.addEventListener('touchstart', (e) => touchStartX = e.changedTouches[0].screenX);
+// document.addEventListener('touchend', (e) => {
+//     if (e.changedTouches[0].screenX > touchStartX + 50) {
+//         document.getElementById("sidepopup").style.left = "0px"; // Open the side navigation
+//     }
+// });
 
 
 document.oncontextmenu = function() {
