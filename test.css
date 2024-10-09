@@ -18,7 +18,7 @@ body{
     transition: 0.5s ease-in-out;
 }
 #menu{
-    background-color: rgba(128, 128, 128, 0.263);
+    background-color: rgba(166, 166, 166, 0.214);
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
     color: aliceblue;
     border-radius: 15px;
@@ -53,8 +53,6 @@ body{
     z-index: 1000;
     margin: 10px;
     overflow-x: hidden;
-    border: 2px gray solid;
-    outline: 1px #252525 solid;
 }
 #menu-content2{
     background-color: #191919;
@@ -69,8 +67,6 @@ body{
     padding-top: 15px;
     z-index: 1000;
     overflow-x: hidden;
-    border: 2px gray solid;
-    outline: 1px #252525 solid;
 }
 @media (max-width: 500px){
     #menu-content{
