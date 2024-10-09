@@ -54,7 +54,6 @@ body{
     margin: 10px;
     overflow-x: hidden;
     border: 2px gray solid;
-    outline: 1px #191919 solid;
 }
 #menu-content2{
     background-color: #191919;
@@ -70,7 +69,6 @@ body{
     z-index: 1000;
     overflow-x: hidden;
     border: 2px gray solid;
-    outline: 1px #191919 solid;
 }
 @media (max-width: 500px){
     #menu-content{
