@@ -11,10 +11,14 @@ div, a, button {
     -webkit-tap-highlight-color: transparent;
   }
 body{
-    background-color: gainsboro;
+    background-color: #252525;
+    transition: 0.5s ease-in-out;
+}
+#one, #two, #three, #four{
+    transition: 0.5s ease-in-out;
 }
 #menu{
-    background-color: #25252561;
+    background-color: rgba(128, 128, 128, 0.263);
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
     color: aliceblue;
     border-radius: 15px;
@@ -38,7 +42,7 @@ body{
     }
 }
 #menu-content{
-    background-color: #252525;
+    background-color: #191919;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
     width: 300px;
     height: 88%;
@@ -49,17 +53,24 @@ body{
     z-index: 1000;
     margin: 10px;
     overflow-x: hidden;
+    border: 2px gray solid;
+    outline: 1px #191919 solid;
 }
 #menu-content2{
-    background-color: #252525;
+    background-color: #191919;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
     width: 50px;
     height: 300px;
     border-radius: 15px;
     position: relative;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
     z-index: 1000;
     overflow-x: hidden;
+    border: 2px gray solid;
+    outline: 1px #191919 solid;
 }
 @media (max-width: 500px){
     #menu-content{
@@ -71,7 +82,8 @@ body{
     position: fixed;
     justify-content: space-around;
     border-radius: 15px;
-    background-color: #25252561;
+    background-color: rgba(128, 128, 128, 0.263);                
+    /* #25252590 */
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
     width: 300px;
     height: 40px;

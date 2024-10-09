@@ -3,27 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Sections</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GPA & CGPA Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .calculator-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .result span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-<div style="width: 100%; position: absolute; bottom: 0%; display: flex; justify-content: center;">
-    <div id="menu-btn">
-        <button id="home" onclick="part1()">HOME</button>
-        <button id="about" onclick="part2()">ABOUT</button>
-        <button id="service" onclick="part3()">SERVICE</button>
-        <button id="contact" onclick="part4()">CONTACT</button>
-    </div>
-</div>
-<div style="background-color: #ADD8E6; width: 100%; height: 100%; position: absolute; display: block;" id="one">
-</div>
-<div style="background-color: #ffffd1; width: 100%; height: 100%; position: absolute; display: none;" id="two">
-</div>
-<div style="background-color: #F08080; width: 100%; height: 100%; position: absolute; display: none;" id="three">
-</div>
-<div style="background-color: #90EE90; width: 100%; height: 100%; position: absolute; display: none;" id="four">
-</div>
 
-<script src="script.js"></script>
+    <div class="calculator-container">
+        <h1>GPA & CGPA Calculator</h1>
+
+        <!-- GPA Calculator -->
+        <div class="input-container">
+            <label for="gpaCourses">Enter Number of GPA Courses:</label>
+            <input type="number" id="gpaCourses" placeholder="Enter number of courses" min="1">
+        </div>
+        <div id="gpaInputs"></div>
+        <button onclick="calculateGPA()">Calculate GPA</button>
+        
+        <!-- CGPA Calculator -->
+        <div class="input-container">
+            <label for="semesters">Enter Number of Semesters:</label>
+            <input type="number" id="semesters" placeholder="Enter number of semesters" min="1">
+        </div>
+        <div id="cgpaInputs"></div>
+        <button onclick="calculateCGPA()">Calculate CGPA</button>
+
+        <!-- Results -->
+        <div class="result">
+            <p>GPA: <span id="gpaResult">0.00</span></p>
+            <p>CGPA: <span id="cgpaResult">0.00</span></p>
+        </div>
+    </div>
+
+    <script>
+        // GPA Calculation
+        function calculateGPA() {
+            let courses = parseInt(document.getElementById('gpaCourses').value);  // Get the number of courses
+            let totalPoints = 0;  // Total grade points for all courses
+            let totalCredits = 0;  // Total credits for all courses
+
+            // Loop through each course
+            for (let i = 1; i <= courses; i++) {
+                let grade = parseFloat(document.getElementById('grade' + i).value);  // Get grade for the course
+                let credits = parseFloat(document.getElementById('credit' + i).value);  // Get credits for the course
+
+                // Multiply grade by credits and add to total points
+                totalPoints += grade * credits;
+                totalCredits += credits;  // Add credits to total credits
+            }
+
+            // Calculate GPA: total points divided by total credits
+            let gpa = totalPoints / totalCredits;
+            document.getElementById('gpaResult').innerText = gpa.toFixed(2);  // Display the result
+        }
+
+        // CGPA Calculation
+        function calculateCGPA() {
+            let semesters = parseInt(document.getElementById('semesters').value);  // Get number of semesters
+            let totalGPA = 0;  // Total GPA points for all semesters
+            let totalCredits = 0;  // Total credits for all semesters
+
+            // Loop through each semester
+            for (let i = 1; i <= semesters; i++) {
+                let semesterGPA = parseFloat(document.getElementById('semesterGPA' + i).value);  // Get GPA for the semester
+                let semesterCredits = parseFloat(document.getElementById('semesterCredit' + i).value);  // Get credits for the semester
+
+                // Multiply GPA by credits and add to total GPA
+                totalGPA += semesterGPA * semesterCredits;
+                totalCredits += semesterCredits;  // Add credits to total credits
+            }
+
+            // Calculate CGPA: total GPA points divided by total credits
+            let cgpa = totalGPA / totalCredits;
+            document.getElementById('cgpaResult').innerText = cgpa.toFixed(2);  // Display the result
+        }
+
+        // Create dynamic input fields for GPA courses
+        document.getElementById('gpaCourses').addEventListener('input', function() {
+            let courses = this.value;
+            let gpaInputs = document.getElementById('gpaInputs');
+            gpaInputs.innerHTML = '';  // Clear any previous inputs
+
+            // Create input fields for each course
+            for (let i = 1; i <= courses; i++) {
+                gpaInputs.innerHTML += `
+                    <div>
+                        <label>Grade for Course ${i}:</label>
+                        <input type="number" id="grade${i}" placeholder="Grade (e.g., 8.5)">
+                        <label>Credits for Course ${i}:</label>
+                        <input type="number" id="credit${i}" placeholder="Credits (e.g., 3)">
+                    </div>
+                `;
+            }
+        });
+
+        // Create dynamic input fields for CGPA semesters
+        document.getElementById('semesters').addEventListener('input', function() {
+            let semesters = this.value;
+            let cgpaInputs = document.getElementById('cgpaInputs');
+            cgpaInputs.innerHTML = '';  // Clear any previous inputs
+
+            // Create input fields for each semester
+            for (let i = 1; i <= semesters; i++) {
+                cgpaInputs.innerHTML += `
+                    <div>
+                        <label>GPA for Semester ${i}:</label>
+                        <input type="number" id="semesterGPA${i}" placeholder="GPA (e.g., 8.0)">
+                        <label>Credits for Semester ${i}:</label>
+                        <input type="number" id="semesterCredit${i}" placeholder="Credits (e.g., 20)">
+                    </div>
+                `;
+            }
+        });
+    </script>
+
 </body>
 </html>
